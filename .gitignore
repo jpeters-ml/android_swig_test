@@ -31,3 +31,5 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+SWIG_Test/app/src/main/java/com/micro_leads/swigtest/test/

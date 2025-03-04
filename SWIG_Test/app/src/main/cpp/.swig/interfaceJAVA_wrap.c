@@ -287,23 +287,19 @@ SWIGEXPORT void JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1sw
 }
 
 
-SWIGEXPORT void JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_process(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3) {
+SWIGEXPORT void JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_process(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jint jarg3) {
   foo *arg1 = (foo *) 0 ;
   void *arg2 = (void *) 0 ;
   int32_t arg3 ;
-  int32_t *argp3 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(foo **)&jarg1; 
   arg2 = *(void **)&jarg2; 
-  argp3 = *(int32_t **)&jarg3; 
-  if (!argp3) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
-    return ;
+  {
+    arg3 = (int32_t)jarg3;
   }
-  arg3 = *argp3; 
   process(arg1,(void const *)arg2,arg3);
 }
 

@@ -49,3 +49,17 @@
     }
     $result = result;
 }
+
+// Mapping for int32_t
+%typemap(jtype) int32_t "int"
+%typemap(jstype) int32_t "int"
+%typemap(jni) int32_t "jint"
+%typemap(javaout) int32_t {
+    return ($jnicall);
+}
+%typemap(in) int32_t {
+    $1 = (int32_t)$input;
+}
+%typemap(out) int32_t {
+    $result = (jint)$1;
+}
