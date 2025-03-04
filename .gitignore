@@ -33,3 +33,4 @@ google-services.json
 *.hprof
 
 SWIG_Test/app/src/main/java/com/micro_leads/swigtest/test/
+SWIG_Test/app/src/main/cpp/.swig/
