@@ -31,7 +31,7 @@ file(REMOVE_RECURSE ${CMAKE_SOURCE_DIR}/.swig)
 # Add native source files
 set(SOURCES
         native-lib.h
-        native-lib.cpp
+        native-lib.c
 )
 
 # Creates and names a library, sets it as either STATIC

@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        swigtest_native_swig.process()
+//        val foo = test.foo()
+//        test.swigtest_native_swig.process(foo, 1, 1)
     }
 
 
