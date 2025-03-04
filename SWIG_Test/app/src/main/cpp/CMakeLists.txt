@@ -27,6 +27,7 @@ include_directories(
 )
 
 file(REMOVE_RECURSE ${CMAKE_SOURCE_DIR}/.swig ${CMAKE_SOURCE_DIR}/../java/com/micro_leads/swigtest/test)
+file(REMOVE_RECURSE ${CMAKE_SOURCE_DIR}/../java/com/micro_leads/swigtest/test)
 
 # Add native source files
 set(SOURCES
