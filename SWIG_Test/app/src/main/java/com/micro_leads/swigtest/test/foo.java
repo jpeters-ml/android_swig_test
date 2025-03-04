@@ -8,20 +8,20 @@
 
 package com.micro_leads.swigtest.test;
 
-public class _test {
+public class foo {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  protected _test(long cPtr, boolean cMemoryOwn) {
+  protected foo(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(_test obj) {
+  protected static long getCPtr(foo obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
-  protected static long swigRelease(_test obj) {
+  protected static long swigRelease(foo obj) {
     long ptr = 0;
     if (obj != null) {
       if (!obj.swigCMemOwn)
@@ -42,22 +42,22 @@ public class _test {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        swigtest_native_swigJNI.delete__test(swigCPtr);
+        swigtest_native_swigJNI.delete_foo(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public void setFoo(byte value) {
-    swigtest_native_swigJNI._test_foo_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
+  public void setBar(byte value) {
+    swigtest_native_swigJNI.foo_bar_set(swigCPtr, this, SWIGTYPE_p_uint8_t.getCPtr(value));
   }
 
-  public byte getFoo() {
-    return (swigtest_native_swigJNI._test_foo_get(swigCPtr, this));
+  public byte getBar() {
+    return (swigtest_native_swigJNI.foo_bar_get(swigCPtr, this));
 }
 
-  public _test() {
-    this(swigtest_native_swigJNI.new__test(), true);
+  public foo() {
+    this(swigtest_native_swigJNI.new_foo(), true);
   }
 
 }

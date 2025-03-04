@@ -9,10 +9,9 @@
 package com.micro_leads.swigtest.test;
 
 public class swigtest_native_swigJNI {
-  public final static native void _test_foo_set(long jarg1, _test jarg1_, byte jarg2);
-  public final static native byte _test_foo_get(long jarg1, _test jarg1_);
-  public final static native long new__test();
-  public final static native void delete__test(long jarg1);
-  public final static native void test_set(long jarg1, _test jarg1_);
-  public final static native long test_get();
+  public final static native void foo_bar_set(long jarg1, foo jarg1_, byte jarg2);
+  public final static native byte foo_bar_get(long jarg1, foo jarg1_);
+  public final static native long new_foo();
+  public final static native void delete_foo(long jarg1);
+  public final static native void process(long jarg1, foo jarg1_, long jarg2, long jarg3);
 }

@@ -233,31 +233,31 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 extern "C" {
 #endif
 
-SWIGEXPORT void JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI__1test_1foo_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyte jarg2) {
-  struct _test *arg1 = (struct _test *) 0 ;
+SWIGEXPORT void JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_foo_1bar_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jbyte jarg2) {
+  struct _foo *arg1 = (struct _foo *) 0 ;
   uint8_t arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(struct _test **)&jarg1; 
+  arg1 = *(struct _foo **)&jarg1; 
   {
     arg2 = (uint8_t)jarg2;
   }
-  if (arg1) (arg1)->foo = arg2;
+  if (arg1) (arg1)->bar = arg2;
 }
 
 
-SWIGEXPORT jbyte JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI__1test_1foo_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jbyte JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_foo_1bar_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jbyte jresult = 0 ;
-  struct _test *arg1 = (struct _test *) 0 ;
+  struct _foo *arg1 = (struct _foo *) 0 ;
   uint8_t result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(struct _test **)&jarg1; 
-  result =  ((arg1)->foo);
+  arg1 = *(struct _foo **)&jarg1; 
+  result =  ((arg1)->bar);
   {
     jresult = (jbyte)result;
   }
@@ -265,48 +265,46 @@ SWIGEXPORT jbyte JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1s
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_new_1_1test(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_new_1foo(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
-  struct _test *result = 0 ;
+  struct _foo *result = 0 ;
   
   (void)jenv;
   (void)jcls;
-  result = (struct _test *)calloc(1, sizeof(struct _test));
-  *(struct _test **)&jresult = result; 
+  result = (struct _foo *)calloc(1, sizeof(struct _foo));
+  *(struct _foo **)&jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_delete_1_1test(JNIEnv *jenv, jclass jcls, jlong jarg1) {
-  struct _test *arg1 = (struct _test *) 0 ;
+SWIGEXPORT void JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_delete_1foo(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  struct _foo *arg1 = (struct _foo *) 0 ;
   
   (void)jenv;
   (void)jcls;
-  arg1 = *(struct _test **)&jarg1; 
+  arg1 = *(struct _foo **)&jarg1; 
   free((char *) arg1);
 }
 
 
-SWIGEXPORT void JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_test_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  struct _test *arg1 = (struct _test *) 0 ;
+SWIGEXPORT void JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_process(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3) {
+  foo *arg1 = (foo *) 0 ;
+  void *arg2 = (void *) 0 ;
+  int32_t arg3 ;
+  int32_t *argp3 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
-  arg1 = *(struct _test **)&jarg1; 
-  test = *arg1;
-}
-
-
-SWIGEXPORT jlong JNICALL Java_com_micro_1leads_swigtest_test_swigtest_1native_1swigJNI_test_1get(JNIEnv *jenv, jclass jcls) {
-  jlong jresult = 0 ;
-  struct _test *result = 0 ;
-  
-  (void)jenv;
-  (void)jcls;
-  result = (struct _test *)&test;
-  *(struct _test **)&jresult = result; 
-  return jresult;
+  arg1 = *(foo **)&jarg1; 
+  arg2 = *(void **)&jarg2; 
+  argp3 = *(int32_t **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null int32_t");
+    return ;
+  }
+  arg3 = *argp3; 
+  process(arg1,(void const *)arg2,arg3);
 }
 
 

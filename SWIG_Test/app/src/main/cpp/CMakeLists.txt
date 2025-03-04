@@ -9,7 +9,7 @@ cmake_minimum_required(VERSION 3.22.1)
 # Since this is the top level CMakeLists.txt, the project name is also accessible
 # with ${CMAKE_PROJECT_NAME} (both CMake variables are in-sync within the top level
 # build script scope).
-project("icom")
+project("swigtest")
 
 set(CMAKE_C_STANDARD 99)
 
@@ -30,7 +30,8 @@ file(REMOVE_RECURSE ${CMAKE_SOURCE_DIR}/.swig)
 
 # Add native source files
 set(SOURCES
-    native-lib.h
+        native-lib.h
+        native-lib.cpp
 )
 
 # Creates and names a library, sets it as either STATIC

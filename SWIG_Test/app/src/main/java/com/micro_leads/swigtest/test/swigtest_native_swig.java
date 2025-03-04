@@ -9,13 +9,8 @@
 package com.micro_leads.swigtest.test;
 
 public class swigtest_native_swig {
-  public static void setTest(_test value) {
-    swigtest_native_swigJNI.test_set(_test.getCPtr(value), value);
-  }
-
-  public static _test getTest() {
-    long cPtr = swigtest_native_swigJNI.test_get();
-    return (cPtr == 0) ? null : new _test(cPtr, false);
+  public static void process(foo baz, SWIGTYPE_p_void data, SWIGTYPE_p_int32_t sz) {
+    swigtest_native_swigJNI.process(foo.getCPtr(baz), baz, SWIGTYPE_p_void.getCPtr(data), SWIGTYPE_p_int32_t.getCPtr(sz));
   }
 
 }
